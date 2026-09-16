@@ -1,0 +1,17 @@
+function counter() {
+
+    let count = 0;
+
+    return function () {
+        count++;
+        return count;
+    };
+}
+
+const c = counter();
+
+console.log(c());
+console.log(c());
+console.log(c());
+
+//count is private, we can't access it directly, but we are accesing bcz of closure.
